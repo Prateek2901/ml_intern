@@ -1,0 +1,60 @@
+--- complex.py	(original)
++++ complex.py	(refactored)
+@@ -18,7 +18,7 @@
+ 		try: 
+ 			return self.__mul__(complex_number(next.x, -1*next.y)).__mul__(complex_number(1.0/(next.mod().x)**2, 0))
+ 		except ZeroDivisionError as e:
+-			print e
++			print(e)
+ 			return None
+ 	def mod(self):
+ 		return complex_number(pow(self.x**2+self.y**2, 0.5), 0)
+@@ -42,30 +42,30 @@
+ 			return complex_number(self.x,self.y)
+ 
+ 	
+-A = complex_number(*map(float, raw_input().strip().split()))
+-B = complex_number(*map(float, raw_input().strip().split()))
++A = complex_number(*list(map(float, input().strip().split())))
++B = complex_number(*list(map(float, input().strip().split())))
+ 
+-print A+B
+-print A-B
+-print A*B
+-print A/B
+-print A.mod()
+-print B.mod()
++print(A+B)
++print(A-B)
++print(A*B)
++print(A/B)
++print(A.mod())
++print(B.mod())
+ 
+-print A.real()
+-print B.real()
++print(A.real())
++print(B.real())
+ 
+-print A.imag()
+-print B.imag()
++print(A.imag())
++print(B.imag())
+ 
+-print A.argument()
+-print B.argument()
++print(A.argument())
++print(B.argument())
+ 
+-print A.conjugate()
+-print B.conjugate()
++print(A.conjugate())
++print(B.conjugate())
+ 
+-print A
+-print B
++print(A)
++print(B)
+ """
+ Input:-
+ 
